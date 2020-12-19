@@ -1,0 +1,626 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url("../fonts/Ubuntu-Bold.ttf");
+}
+* {
+    position:relative;
+}
+
+
+body{
+    background-color:#87CEEB;
+
+}
+.main-content{
+    background: url("../materials/background-students.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+
+
+
+}
+.container-fluid{
+    padding: 0px;
+}
+.darker{
+    background: #1f1f1f;
+    opacity: 55%;
+    height: 100vh;
+}
+.ustudy-text{
+    color:white;
+    position: absolute;
+    top: 20vh;
+    font-size: 3.5em;
+    font-family: Ubuntu-Bold,serif;
+
+
+
+}
+.anim-items{
+    transform: translate(0px,120%);
+    opacity: 0;
+    transition: all 0.9s ease 0s;
+}
+._active{
+    transform: translate(0px,0px);
+    opacity: 1;
+}
+.icon{
+    border-radius:50%;
+}
+nav li{
+    text-transform: uppercase;
+}
+.menu-bar{
+    padding-bottom: 0px;
+}
+.nav-item:hover{
+    border-bottom: solid 2.5px;
+    margin-bottom: -2.5px;
+    border-color: #8b8b8b;
+
+}
+.active{
+    border-bottom: solid 2.5px;
+    margin-bottom: -2.5px;
+
+
+}
+
+.button-log,.button-tocall {
+    background: white;
+    height: 50px;
+    position: relative;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30vw;
+    border-radius: 10px;
+    box-shadow: 3px 3px;
+    padding: 10px 0;
+    text-transform: uppercase;
+
+
+
+}
+.button-tocall a,.button-log a{
+    color: #87CEEB;
+
+}
+.button-tocall a:hover,.button-log a:hover{
+    text-underline: none;
+    color: #252e30;
+}
+.button-tocall{
+    top:45vh;
+
+
+
+}
+.welcome-page{
+    text-align: center;
+    color:whitesmoke;
+    background: #0f6674;
+    min-height: 300px;
+    padding: 25px 15px;
+
+
+}
+/*introduction ustudy*/
+.intro{
+    background: url("../materials/ustudy-inner.jfif") no-repeat;
+    background-size: cover;
+    height: 500px;
+
+}
+.intro a{
+    position: absolute;
+    left:25px;
+    bottom: 15px;
+}
+.intro h1{
+    color: white;
+    /*left:25px;*/
+    padding: 25px;
+
+
+}
+
+
+
+
+/*modal window */
+.about-us{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    overflow-y:auto;
+    overflow-x:hidden;
+    visibility: hidden;
+    opacity: 0%;
+    transition: all 0.3s ease 0s;
+}
+.about-us:target{
+    visibility: visible;
+    opacity: 100%;
+
+
+
+}
+.about-us:target .about-us-content{
+    opacity: 1;
+    transform: translate(0px,0px);
+}
+.about-us > a{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.about-us-content{
+    width: 60%;
+    color:#0f6674;
+    background: white;
+    transition: all 0.8s ease 0s;
+    transform: translate(0px,-100%);
+    opacity: 0;
+    top:15%;
+    /*overflow-scrolling: inherit;*/
+    overflow: auto;
+
+
+
+    padding: 50px 25px;
+
+}
+.about-us-content a{
+    position: absolute;
+    right: 5px;
+    top:5px;
+
+}
+
+
+
+.hoverBox:hover{
+    box-shadow: 0 0;
+
+
+}
+.our-programms{
+    color: white;
+    font-size: 3em;
+    justify-content: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 50px;
+}
+.our-programms-1{
+    justify-content: space-between;
+    max-width:100%;
+    margin: 15px 25px;
+
+}
+.programs{
+    background-color: white;
+    padding: 0px;
+    text-align: center;
+
+
+    margin: 25px;
+
+}
+.programs img{
+    width: 100%;
+
+}
+.programs span{
+    display: block;
+    font-size:20px;
+    color: black;
+    text-transform: uppercase;
+
+}
+.programs button{
+    font-size: 20px;
+    background-color:#0f6674;;
+    border:solid 1px ;
+    color: white;
+    width:75%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+.programs button:hover,.book-content button:hover{
+    background-color:#ffc107;
+}
+.programs button:active{
+    background-color:#aaaa;
+}
+.bck-photos{
+    text-align: center;
+    position: relative;
+    top: 100px;
+
+
+
+}
+.bck-photos img{
+    width: 90%;
+    height:500px;
+    border: solid white 5px;
+
+
+}
+.owl-dots.active{
+    background: #7abaff;
+    border-color: black;
+}
+
+.owl-dots{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border:solid 2px white;
+    border-radius: 50%;
+    margin: 25px 10px;
+
+
+
+}
+.dots{
+    display:inline-block;
+    position: relative;
+    top: 95%;
+
+
+
+}
+
+.map{
+    position: relative;
+    text-align: center;
+    top: 200px;
+    border:solid;
+    border-color: white;
+    padding: 0px;
+
+}
+.map iframe{
+    padding: 0;
+}
+.programs-page{
+    top:35px;
+    padding: 10px 30px;
+    text-align: center;
+    color:white;
+
+}
+.programs-page div{
+    margin-top:25px;
+}
+.programs-page h1{
+    text-transform: uppercase;
+    margin-bottom: 55px ;
+}
+.programs-page img{
+    margin-bottom:100px;
+    width:50%;
+}
+
+footer{
+    text-align: center;
+    padding: 15px 10px;
+    height: 350px;
+    position: relative;
+    top: 250px;
+    background: #0f6674;
+    color: white;
+}
+.icon-socialmedia{
+    height: 50px;
+    width: 50px;
+    opacity:75%;
+}
+.icon-socialmedia:hover{
+    opacity:100%;
+}
+#copyright{
+    top:170px;
+    text-align: center;
+}
+
+
+/* ============== basylymdar ================= */
+
+
+.links{
+    background-color:#0f6674;;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    padding:10px 10px;
+}
+.links a{
+    text-align: center;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: white;
+
+
+
+}
+
+.books{
+    color: white;
+    font-size: 3em;
+    justify-content: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 50px;
+}
+
+.book{
+    background-color: white;
+    padding: 0px;
+    text-align: center;
+    margin: 25px;
+}
+.book img{
+    width: 100%;
+    height: 400px;
+
+}
+.book span{
+    display: block;
+    font-size:20px;
+    color: black;
+    text-transform: uppercase;
+
+}
+.book button{
+    font-size: 20px;
+    background-color:#0f6674;;
+    border:solid 1px ;
+    color: white;
+    width:75%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+/********* Gallery **********/
+.photos,.videos{
+    font-family: 'courier', serif;
+    font-weight: bold;
+    padding: 50px 40px 50px 40px;
+    color: white;
+    text-align: center;
+    background-color:#0f6674;
+    margin-top:15px ;
+    text-transform: uppercase;
+}
+
+.gallery_box{
+    margin: 40px auto;
+    text-align: center;
+}
+.gallery_box img{
+    transition: 1s;
+    padding: 15px;
+    width: 230px;
+}
+.gallery_box img:hover{
+    filter: grayscale(100%);
+    transform: scale(1.2);
+}
+.video-player >.row{
+   justify-content: space-between;
+    width: 100%;
+}
+.vid1,.vid2,.vid3{
+    display: block;
+    height:600px;
+    border:solid 2px white;
+    padding:0px;
+    margin:15px auto;
+
+}
+
+video:focus{
+    outline: none;
+}
+
+
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .nav-link.link-text{
+        font-size: 0.8em;
+    }
+    .ustudy-text{
+        font-size: 2.5em;
+    }
+    .invisible-md{
+        visibility: hidden;
+    }
+    .about-us-content{
+        font-size: 16px;
+        width: 70%;
+    }
+
+
+
+
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-content{
+        background-image: url("../materials/background-students-medium.jpg");
+
+    }
+    .hoverBox{
+        width: 400px;
+        font-size: 17px;
+    }
+    .ustudy-text{
+        font-size: 3em;
+    }
+    .our-programms{
+        text-align: center;
+    }
+    .programs-page img{
+        margin-bottom:100px;
+        width:65%;
+    }
+    .invisible-sm{
+        visibility: hidden;
+        display: none;
+    }
+    .links a{
+        font-size: 16px;
+
+    }
+    .our-programms-1{
+        justify-content: center;
+    }
+    .book img{
+        width: auto;
+    }
+    .book {
+        border-radius: 10px;
+    }
+    .about-us-content{
+        font-size: 14px;
+        width: 80%;
+    }
+    .welcome-page h1{
+        font-size: 4vw;
+
+    }
+    .welcome-page {
+        font-size: 1.8vw;
+
+    }
+
+
+
+
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+    .invisible-xs{
+        visibility: hidden;
+        display: none;
+    }
+    .main-content{
+        background-image: url("../materials/background-students-mobile.jpg");
+
+    }
+    .hoverBox{
+        width: 300px;
+        font-size: 20px;
+    }
+    .col-xxs {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .programs-page img{
+        margin-bottom:100px;
+        width:75%;
+    }
+    .links a{
+        font-size: 16px;
+
+    }
+    .text-ourprogramms{
+        font-size: 25px;
+    }
+    .our-programms-1{
+        justify-content: center;
+    }
+    .book img{
+        width: auto;
+    }
+    .book {
+        border-radius: 13px;
+    }
+    .about-us-content{
+        width: 100%;
+    }
+    .welcome-page h1{
+        font-size: 5vw;
+
+    }
+    .welcome-page {
+        font-size: 13px;
+
+    }
+
+
+
+}
+
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+    .invisible-sxs{
+        visibility: hidden;
+        display: none;
+    }
+    .col-xxs {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .programs-page img{
+        margin-bottom:100px;
+        width:100%;
+    }
+    .text-ourprogramms{
+        font-size: 6vw;
+    }
+    .book img{
+        width: auto;
+    }
+    .book {
+        border-radius: 10px;
+    }
+    .about-us-content{
+        font-size: 7px;
+    }
+    .about-us-content{
+        width: 100%;
+    }
+    .welcome-page h1{
+        font-size: 5vw;
+
+    }
+    .welcome-page {
+        font-size: 12px;
+
+    }
+
+
+
+}
