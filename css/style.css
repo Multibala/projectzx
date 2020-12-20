@@ -90,7 +90,7 @@ nav li{
 
 }
 .button-tocall a:hover,.button-log a:hover{
-    text-underline: none;
+    text-rendering: none;
     color: #252e30;
 }
 .button-tocall{
@@ -119,6 +119,8 @@ nav li{
     position: absolute;
     left:25px;
     bottom: 15px;
+    text-decoration: none;
+    
 }
 .intro h1{
     color: white;
@@ -130,6 +132,7 @@ nav li{
  .intro span {
      color:white;
      font-size: 25px;
+  
 
 
 }
@@ -153,14 +156,14 @@ nav li{
     opacity: 0%;
     transition: all 0.3s ease 0s;
 }
-.about-us:target{
+.about-us.open{
     visibility: visible;
     opacity: 100%;
 
 
 
 }
-.about-us:target .about-us-content{
+.about-us.open .about-us-content{
     opacity: 1;
     transform: translate(0px,0px);
 }
@@ -218,6 +221,7 @@ nav li{
     background-color: white;
     padding: 0px;
     text-align: center;
+    transition: all 0.8s ease 0s;
 
 
     margin: 25px;
@@ -225,7 +229,11 @@ nav li{
 }
 .programs img{
     width: 100%;
+    
 
+}
+.programs:hover{
+    transform: scale(1.2,1.2);
 }
 .programs span{
     display: block;
