@@ -85,27 +85,30 @@ if(animItems.length>0){
 
 
 let books =[
-    ["materials/physics10.jpg"],
-    ["materials/physics10.jpg"],
-    ["materials/physics10.jpg"],
-    ["materials/physics10.jpg"]
+    [],//4-5
+    ["materials/geography6.jpg"],//6-7
+    ["materials/dtarih8.jpg","materials/ktarih9.jpg"],//8-9 
+    ["materials/algebra11.jpg","materials/chemistry10.jpg","materials/physics11.jpg"]//10-11
   
 ];
 let booksName =[
-    ["Физика,10 сынып"],
-    ["Физика,10 сынып"],
-    ["Физика,10 сынып"],
-    ["Физика,10 сынып"]
+    [""],
+    ["География,6 сынып"],
+    ["Дүние Тарих,8 сынып","Қазақстан тарихы 9 сынып"],
+    ["Алгебра,11 сынып","Химия 10 сынып","Физика 11 сынып"]
 ];
 let description =[
     ["some text"],
-    ["some text"],
-    ["some text"],
-    ["some text"]
+    ["some text","some text"],
+    ["some text","some text"],
+    ["some text","some text","some text"]
 ]
 const canvasBook = document.querySelector(".book-content");
+let array = []; 
+
 if(canvasBook!==null){
 getBooks(4);
+isDone=true;
 
 function getBooks(index){
     /*
@@ -129,7 +132,9 @@ function getBooks(index){
                 span.innerHTML = booksName[i][j];
                 let btn =document.createElement('button');
                 btn.innerHTML="Толығырақ"
-                btn.addEventListener('click', getDescription(content,i,j));
+                btn.onclick=()=>{getDescription(content,i,j)};
+                content.onclick=()=>{initContent(content,i,j)}
+                array[i]=content.childNodes;
                 content.append(image,span,btn);
                 canvasBook.appendChild(content);
 
@@ -137,6 +142,9 @@ function getBooks(index){
         }
     }
     else {
+        if(books[index].length==0){
+            canvasBook.innerHTML="казир бул китаптар жок :(";
+        }
 
         for (let i = 0; i < books[index].length; i++) {
             let content = document.createElement("div");
@@ -146,11 +154,11 @@ function getBooks(index){
             let span = document.createElement('span');
             span.innerHTML = booksName[index][i];
             let btn = document.createElement('button');
-            btn.addEventListener('click', getDescription(content,index,i));
+            btn.onclick=()=>{getDescription(content,index,i)};
             btn.innerHTML = "Толығырақ"
             content.append(image, span, btn);
             canvasBook.appendChild(content);
-            content.addEventListener('click', initContent(content,content.childNodes));
+            content.onclick=()=>{initContent(content,index,j)}
 
 
         }
@@ -164,21 +172,40 @@ function getBooks(index){
 
 }
  function getDescription(content,row,col){
-    content.style.transform="scale(-1,1)"
-    content.innerHTML="<h1>"+booksName[row][col]+"</h1>"+description[row][col]
+     isDone =true;
+     
 
+    content.style.transform="scale(-1,1)"
+    setTimeout(()=>{
+        content.style.transform="scale(1,1)"
+    },500)
+    
+
+    content.innerHTML="<h1>"+ booksName[row][col] +"</h1>"+description[row][col]
 
 
 
  }
- function initContent(content,childs){
-    if(childs.length<=2){
+ function initContent(content,row,col){
+    
+    if(!isDone){
         content.innerHTML="";
         content.style.transform="scale(-1,1)"
-        for(let i=0;i<childs.length;i++){
-            content.appendChild(childs[i]);
-        }
+        setTimeout(()=>{
+            content.style.transform="scale(1,1)"
+        },500)
+            content.className = "col-lg-3 col-sm-8 col-xxs book";
+            let image = document.createElement('img');
+            image.src = books[row][col];
+            let span = document.createElement('span');
+            span.innerHTML = booksName[row][col];
+            let btn = document.createElement('button');
+            btn.onclick=()=>{getDescription(content,row,col)};
+            btn.innerHTML = "Толығырақ"
+            content.append(image, span, btn);
+        
     }
+    isDone=false;
 
 
  }
@@ -186,7 +213,7 @@ function getBooks(index){
 
  const modalWindow = document.querySelector("#target")
  function eventModalWindow(){
-     console.log("Hellow world")
+     console.log("Hello world")
     
     if(modalWindow.classList.contains("open")){
         modalWindow.classList.remove("open");

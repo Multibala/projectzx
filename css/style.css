@@ -215,6 +215,7 @@ nav li{
     justify-content: space-between;
     max-width:100%;
     margin: 15px 25px;
+    
 
 }
 .programs{
@@ -373,7 +374,7 @@ footer{
 }
 
 .books{
-    color: white;
+  
     font-size: 3em;
     justify-content: center;
     text-transform: uppercase;
@@ -386,6 +387,8 @@ footer{
     padding: 0px;
     text-align: center;
     margin: 25px;
+    transition:all 0.8s ease 0s;
+    min-height: 500px;
 }
 .book img{
     width: 100%;
@@ -437,7 +440,7 @@ footer{
     transform: scale(1.2);
 }
 .video-player >.row{
-   justify-content: space-between;
+    justify-content: space-between;
     width: 100%;
 }
 .vid1,.vid2,.vid3{
@@ -452,6 +455,61 @@ footer{
 video:focus{
     outline: none;
 }
+
+/* interview */
+
+.ata-analar, .kuratorlar, .tulekter, .ustudents{
+    font-family: 'courier', serif;
+    font-weight: bold;
+    padding: 50px 40px 50px 40px;
+    color: white;
+    text-align: center;
+    background-color:#0f6674;
+    margin-top:15px ;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    width:100%;
+}
+
+
+
+.parent-video, .kurator-video, .tulekter-video, .ustudents-video {
+  width: 100%;
+ 
+}
+
+.parents {
+  display: block;
+  height:500px;
+  border:solid 2px white;
+  padding:0px;
+  
+}
+
+.students {
+  display:block;
+  height:500px;
+  border:solid 2px white;
+  padding: 0;
+  margin: 15px 100px;
+}
+.sws{
+    margin: 0px;
+    justify-content:center;
+}
+/* .sws >video{
+    
+} */
+
+
+
+
+
+
+
+
+/* ......... */
+
 
 
 
@@ -476,6 +534,9 @@ video:focus{
     .about-us-content{
         font-size: 16px;
         width: 70%;
+    }
+    .sws{
+        justify-content: space-around;
     }
 
 
