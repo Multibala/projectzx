@@ -708,6 +708,12 @@ video:focus{
         left: 50%;
         transform: translate(-50%);
     }
+    .bck-photos img{
+        width:100%;
+        height:50vw;
+        border:none;
+       
+    }
 
 
 
@@ -762,6 +768,12 @@ video:focus{
         left: 50%;
         transform: translate(-50%);
         
+    }
+    .bck-photos img{
+        width:100%;
+        height:50vw;
+        border:none;
+       
     }
    
 
