@@ -112,20 +112,33 @@ nav li{
 .intro{
     background: url("../materials/ustudy-inner.jfif") no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 40vw;
+    
 
 }
+/* .intro > img{
+ 
+   width: 100%;
+   top:0;
+   left:0;
+   max-height:500px;
+}  */
 .intro a{
     position: absolute;
     left:25px;
     bottom: 15px;
     text-decoration: none;
+   
     
 }
 .intro h1{
     color: white;
-    /*left:25px;*/
     padding: 25px;
+    
+    border-radius: 25px;
+   
+    
+    /* right:35px; */
 
 
 }
@@ -218,6 +231,7 @@ nav li{
     
 
 }
+
 .programs{
     background-color: white;
     padding: 0px;
@@ -263,6 +277,7 @@ nav li{
     text-align: center;
     position: relative;
     top: 100px;
+    
 
 
 
@@ -271,6 +286,7 @@ nav li{
     width: 90%;
     height:500px;
     border: solid white 5px;
+    transition: all 0.8s ease 0s;
 
 
 }
@@ -355,6 +371,14 @@ footer{
 
 /* ============== basylymdar ================= */
 
+.book-content{
+    text-align: center;
+    max-width:100%;
+    
+    
+    
+}
+
 
 .links{
     background-color:#0f6674;;
@@ -372,23 +396,35 @@ footer{
 
 
 }
+.inner-text h1{
+    text-align: center;
+    font-size:25px;
+
+}
+.inner-text{
+    font-size:16px;
+}
 
 .books{
-  
+    
     font-size: 3em;
     justify-content: center;
     text-transform: uppercase;
     position: relative;
     top: 50px;
+   
 }
+
+
 
 .book{
     background-color: white;
     padding: 0px;
     text-align: center;
-    margin: 25px;
+    margin: 25px 3.2%;
+
     transition:all 0.8s ease 0s;
-    min-height: 500px;
+    min-height: 520px;
 }
 .book img{
     width: 100%;
@@ -538,6 +574,7 @@ video:focus{
     .sws{
         justify-content: space-around;
     }
+   
 
 
 
@@ -581,6 +618,7 @@ video:focus{
     }
     .book {
         border-radius: 10px;
+        margin:25px auto;
     }
     .about-us-content{
         font-size: 14px;
@@ -593,6 +631,15 @@ video:focus{
     .welcome-page {
         font-size: 1.8vw;
 
+    }
+    .intro h1{
+        text-align: center;
+        font-size:30px;
+    }
+    .intro a{
+        left: 50%;
+        transform: translate(-50%);
+        font-size:30px;
     }
 
 
@@ -639,6 +686,7 @@ video:focus{
     }
     .book {
         border-radius: 13px;
+        margin:25px auto;
     }
     .about-us-content{
         width: 100%;
@@ -650,6 +698,15 @@ video:focus{
     .welcome-page {
         font-size: 13px;
 
+    }
+    .intro h1 {
+        text-align: center;
+        font-size:25px;
+        
+    }
+    .intro a{
+        left: 50%;
+        transform: translate(-50%);
     }
 
 
@@ -681,6 +738,7 @@ video:focus{
     }
     .book {
         border-radius: 10px;
+        margin:25px auto;
     }
     .about-us-content{
         font-size: 7px;
@@ -696,6 +754,16 @@ video:focus{
         font-size: 12px;
 
     }
+    .intro h1{
+        text-align: center;
+        font: size 16px;
+    }
+    .intro a{
+        left: 50%;
+        transform: translate(-50%);
+        
+    }
+   
 
 
 

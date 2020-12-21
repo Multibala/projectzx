@@ -36,7 +36,7 @@
                 <li class="nav-item active">
                     <a class="nav-link link-text" href="#">Басты бет<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link link-text" href="#" onclick="eventModalWindow()">Біз туралы</a></li>
+                <li class="nav-item"><a class="nav-link link-text" href="#" onclick="eventModalWindow('#target')">Біз туралы</a></li>
                 <li class="nav-item"><a class="nav-link link-text" href="basylymdar.html">БАСЫЛЫМДАР</a></li>
                 <li class="nav-item"><a class="nav-link link-text" href="interview.html">ИНТЕРВЬЮЛЕР</a></li>
                 <li class="nav-item"><a class="nav-link link-text" href="gallery.html">
@@ -87,11 +87,12 @@
  
 
 </div>
-<div class="intro invisible-sm invisible-xs invisible-sxs">
+<div class="intro ">
+    <!-- <img src ="materials/ustudy-inner.jfif"> -->
     <h1>Қош келдің</h1>
-    <a href="#play-video">
+    <a href="#" onclick="eventModalWindow('#play-video')">
         <img src="materials/play.png" width="50" height="50">
-        <span>Танысу</span>
+        <span class="invisible-sm invisible-sxs invisible-xs">Танысу</span>
 
     </a>
 
@@ -181,7 +182,7 @@
 
 <!-- biz turaly -->
 <div class="about-us" id="target">
-    <a onclick="eventModalWindow()"></a>
+    <a onclick="eventModalWindow('#target')"></a>
     <div class="about-us-content">
         <h1>UStudy education</h1>
 
@@ -244,7 +245,7 @@
         жолында семинар-тренингтер ұйымдастыру.</li>
         </ul>
 
-        <a  onclick="eventModalWindow()"><img src="gallery/close.png" width="27" height="27">
+        <a  onclick="eventModalWindow('#target')"><img src="gallery/close.png" width="27" height="27">
 
         </a>
     </div>
@@ -252,12 +253,12 @@
 
 <!-- intro video -->
 <div class="about-us" id="play-video">
-    <a href="##"></a>
+    <a onClick = "eventModalWindow('#play-video')"></a>
     <div class="about-us-content">
         <video class="vid1" controls autoplay="false">
             <source src="gallery/video1.mp4" type="video/mp4 " >
         </video>
-        <a href="##" id="lo"><img src="gallery/close.png" width="27" height="27"></a>
+        <a onclick="eventModalWindow('#play-video')" id="lo"><img src="gallery/close.png" width="27" height="27"></a>
     </div>
 
 </div>

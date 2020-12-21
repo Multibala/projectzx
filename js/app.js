@@ -181,7 +181,7 @@ function getBooks(index){
     },500)
     
 
-    content.innerHTML="<h1>"+ booksName[row][col] +"</h1>"+description[row][col]
+    content.innerHTML="<div class="+'inner-text'+"><h1>"+ booksName[row][col] +"</h1>"+description[row][col]+"</div>"
 
 
 
@@ -211,9 +211,11 @@ function getBooks(index){
  }
 }
 
- const modalWindow = document.querySelector("#target")
- function eventModalWindow(){
+ 
+ function eventModalWindow(name="#target"){
      console.log("Hello world")
+     const modalWindow = document.querySelector(name);
+ 
     
     if(modalWindow.classList.contains("open")){
         modalWindow.classList.remove("open");
